@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Deadlock Detector — Clear Resolution</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1>Deadlock Detector</h1>
+      <p class="subtitle">Banker's algorithm + RAG (process boxes, resource circles)</p>
+    </header>
+
+    <div class="content">
+      <div class="panel left">
+        <div class="card controls">
+          <div class="row">
+            <label>Processes</label>
+            <input id="processes" type="number" value="2" min="1">
+            <label>Resources</label>
+            <input id="resources" type="number" value="2" min="1">
+            <button class="btn primary" onclick="generateTables()">Generate</button>
+          </div>
+
+          <h3>Available</h3>
+          <div id="availableTable"></div>
+
+          <h3>Max Matrix</h3>
+          <div id="maxTable"></div>
+
+          <h3>Allocation Matrix</h3>
+          <div id="allocationTable"></div>
+
+          <div class="row actions">
+            <button class="btn" onclick="predictDeadlock()">Predict Deadlock</button>
+            <button class="btn" id="resolveBtn" onclick="resolveDeadlock()" disabled>Resolve Deadlock</button>
+          </div>
+        </div>
+
+        <div class="card output">
+          <h3>Status</h3>
+          <p id="safeSeq">Safe Sequence: n/a</p>
+          <p id="deadlockInfo">Deadlocked: —</p>
+        </div>
+      </div>
+
+      <div class="panel right">
+        <div class="card graph-card">
+          <h3>Resource Allocation Graph</h3>
+          <div id="graph"></div>
+          <div class="graph-controls">
+            <button class="btn small" onclick="refreshGraph()">Refresh</button>
+            <button class="btn small" onclick="downloadGraph()">Download</button>
+          </div>
+        </div>
+
+        <div class="card resolution">
+          <h3>Deadlock Resolution Explanation</h3>
+          <pre id="resolveOutput" class="resolve-box">No action taken yet.</pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/static/ui.js"></script>
+</body>
+</html>
