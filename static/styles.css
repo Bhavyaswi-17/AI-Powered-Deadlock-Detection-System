@@ -1,0 +1,156 @@
+:root {
+  --bg: #081026;
+  --card: #0f1724;
+  --accent: #57a6ff;
+  --muted: #98a6b3;
+  --danger: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  font-family: Segoe UI, Roboto, Arial;
+  background: linear-gradient(180deg, #051025, #071428);
+  color: #e6eef6
+}
+
+.header {
+  padding: 20px 28px
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+  color: #fff
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+  color: var(--muted);
+  font-size: 13px
+}
+
+.content {
+  display: flex;
+  gap: 18px;
+  padding: 18px 28px
+}
+
+.panel.left {
+  width: 480px
+}
+
+.panel.right {
+  flex: 1
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6)
+}
+
+.controls .row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px
+}
+
+.controls label {
+  color: var(--muted);
+  font-size: 14px
+}
+
+.controls input {
+  width: 48px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  background: #0b1620;
+  color: inherit
+}
+
+.btn {
+  background: var(--accent);
+  color: #032;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600
+}
+
+.btn.small {
+  background: #57a6ff;
+  color: #031;
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin-right: 8px
+}
+
+.actions {
+  margin-top: 10px
+}
+
+h3 {
+  margin: 10px 0 8px 0;
+  color: #9fd8ff;
+  font-size: 14px
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  margin-top: 6px
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  text-align: center;
+  background: transparent;
+  color: #e6eef6
+}
+
+input[type=number] {
+  width: 56px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  background: #081424;
+  color: inherit;
+  text-align: center
+}
+
+.graph-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+
+#graph {
+  height: 420px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04)
+}
+
+.resolve-box {
+  background: #0b1623;
+  color: #c7e0ff;
+  padding: 12px;
+  border-radius: 8px;
+  height: 180px;
+  overflow: auto;
+  white-space: pre-wrap;
+  border: 1px solid rgba(255, 255, 255, 0.06)
+}
